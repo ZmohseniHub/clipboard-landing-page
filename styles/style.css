@@ -1,0 +1,212 @@
+@font-face {
+    font-family: "Bai Jamjuree regular";
+    src: local("Bai Jamjuree regular"), local("BaiJamjuree-Regular"), url(../fonts/BaiJamjuree-Regular.ttf) format(truetype);
+}
+@font-face {
+    font-family: "Bai Jamjuree semibold";
+    src:local("Bai Jamjuree semibold"), local("Bai Jamjuree-semibold"), url(../fonts/BaiJamjuree-SemiBold.ttf) format(truetype);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+}
+body{
+    display: grid;
+    text-align: center;
+    background-image: url(../images/bg-header-desktop.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 18px;
+    font-family: "Bai Jamjuree regular",serif;
+    line-height: 30px;
+}
+.container{
+    max-width: 1280px;
+    margin: 100px auto;
+    
+}
+p{
+    color: hsl(201, 11%, 66%);
+    margin-bottom: 30px;
+}
+section > p {
+    padding: 0 300px;
+}
+h1, h2, h3, h4{
+    color: hsl(210, 10%, 33%);
+    font-family: "Bai Jamjuree semibold";
+    font-weight: 600;
+}
+h1{
+    font-size: 40px;
+    margin: 60px 0 20px 0;
+}
+h2{
+    margin-bottom: 25px;
+}
+h3, h4{
+    margin: 15px 0;
+}
+section{
+    margin-top: 100px;
+}
+button{
+    padding: 15px 30px;
+    font-family: inherit;
+    color: white;
+    font-size: inherit;
+    border-radius: 30px;
+    margin: 25px 8px;
+    box-shadow: 1px 1px 8px hsl(201, 11%, 66%);
+}
+button:nth-child(1){
+    background-color: hsl(171, 66%, 44%);  
+}
+button:nth-child(1):hover{
+    opacity: 75%; 
+}
+button:nth-child(2){
+    background-color: hsl(233, 100%, 69%);
+}
+button:nth-child(2):hover{
+    opacity: 75%; 
+}
+.section-2-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-top: 30px;
+}
+.section-2-img{
+    flex: 1;
+}
+.section-2-img >img{
+    width: 100%;
+    object-fit: cover;
+}
+.section-2-text{
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-self: flex-start;
+    text-align: left;
+    padding:0 50px
+}
+.section-3-img{
+    width: 80%;
+    margin: 0 auto;
+}
+.section-3-img >img{
+    width: 100%;
+    object-fit: cover;
+}
+.section-4-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 30px; 
+    align-items: baseline;
+}
+.section-4-grid > div{
+padding: 10px;
+}
+.section-5{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    padding: 20px 0;
+    align-items: baseline;
+    justify-items: center;
+    margin: 10px auto;
+}
+.section-5 img{
+    max-width: 150px;
+}
+footer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+    align-items: center;
+    justify-items: center;
+    background-color: hsl(0, 0%, 95%);
+    padding: 10px;
+}
+.footer-logo{
+    width: 40px;
+
+}
+.footer-nav{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    justify-self: flex-start;
+    
+    justify-items: start;
+    column-gap: 30px;
+}
+.footer-nav a{
+    color: hsl(201, 11%, 66%);
+}
+
+.footer-nav a:hover{
+    color: hsl(171, 66%, 44%);
+}
+.social-media :nth-child(2){
+    padding: 0 15px;
+}
+@media screen and (max-width:1024px) {
+    section > p {
+        padding: 0 100px;
+    
+    }
+}
+@media screen and (max-width:768px){
+    h1{
+        font-size: 30px;
+    }
+    section{
+        margin-top: 50px;
+    }
+    section > p {
+        padding: 0 25px;
+    
+    }
+    h1, h2, h3, h4, p {
+        margin: 0;
+        padding: 20px;
+       
+    }
+    button{
+        display: block;
+        margin: 25px auto;
+        padding: 20px 80px;
+    }
+    .section-2-grid {
+        grid-template-columns: 1fr;
+    }
+    .section-2-text{
+
+        justify-self: center;
+        text-align: center;
+        padding: 20px 0px;
+    }
+    .section-4-grid{
+    
+        grid-template-columns: 1fr;
+        column-gap: 0px; 
+        row-gap: 25px;
+        margin-top: 20px;
+       
+    }
+    .section-5{
+        grid-template-columns: repeat(1, 1fr);
+        row-gap: 50px;
+
+    }
+    footer{
+        grid-template-columns: 1fr;
+        font-size: 13px;
+        row-gap: 10px;
+    }
+   
+}
